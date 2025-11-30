@@ -35,21 +35,24 @@ export default function Home() {
           <div className="animate-fade-in-up flex flex-col items-center gap-6 pt-12 text-center">
             <div className="relative">
               <h1 className="animate-gradient bg-gradient-to-r from-amber-600 via-rose-500 to-violet-600 bg-clip-text text-5xl font-bold tracking-tight text-transparent dark:from-violet-400 dark:via-cyan-400 dark:to-fuchsia-400 sm:text-7xl">
-                오리연못미꾸라지
+                오리연못 미꾸라지
               </h1>
               <div className="absolute inset-0 -z-10 blur-2xl">
                 <h1 className="animate-gradient bg-gradient-to-r from-amber-600 via-rose-500 to-violet-600 bg-clip-text text-5xl font-bold tracking-tight text-transparent opacity-40 dark:from-violet-400 dark:via-cyan-400 dark:to-fuchsia-400 dark:opacity-50 sm:text-7xl">
-                  오리연못미꾸라지
+                  오리연못 미꾸라지
                 </h1>
               </div>
             </div>
 
-            <div className="glass flex items-center gap-3 rounded-full px-5 py-3 shadow-lg shadow-amber-500/10 dark:shadow-violet-500/10">
-              <KaistLogo className="h-6 w-auto" />
-              <div className="h-4 w-px bg-amber-300 dark:bg-zinc-700" />
-              <span className="text-sm font-medium text-amber-800 dark:text-zinc-300">
-                컴퓨터공학 & 전기전자공학
-              </span>
+            {/* KAIST Badge - Prominent Display */}
+            <div className="glass flex flex-col items-center gap-4 rounded-2xl px-8 py-6 shadow-xl shadow-amber-500/10 dark:shadow-violet-500/10 sm:px-12">
+              <KaistLogo className="h-12 w-auto sm:h-16" />
+              <div className="flex items-center gap-3">
+                <div className="h-2 w-2 animate-pulse rounded-full bg-emerald-500" />
+                <span className="text-base font-semibold text-amber-800 dark:text-zinc-200 sm:text-lg">
+                  전산학부 · 전기전자공학부 졸업
+                </span>
+              </div>
             </div>
 
             <p className="max-w-lg text-lg leading-relaxed text-amber-900/70 dark:text-zinc-400">
@@ -129,19 +132,66 @@ export default function Home() {
 
             <div className="grid w-full gap-4 sm:grid-cols-2 lg:grid-cols-5">
               {[
-                "반응형 웹",
-                "SEO(검색 엔진 최적화)",
-                "빠른 개발",
-                "무제한 확장성",
-                "유지보수 용이",
+                {
+                  label: "반응형 웹",
+                  icon: (
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-6 w-6">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+                    </svg>
+                  ),
+                  color: "text-violet-500 dark:text-violet-400",
+                  bg: "bg-violet-100 dark:bg-violet-900/30",
+                },
+                {
+                  label: "SEO 최적화",
+                  icon: (
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-6 w-6">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                    </svg>
+                  ),
+                  color: "text-cyan-500 dark:text-cyan-400",
+                  bg: "bg-cyan-100 dark:bg-cyan-900/30",
+                },
+                {
+                  label: "빠른 개발",
+                  icon: (
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-6 w-6">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" />
+                    </svg>
+                  ),
+                  color: "text-amber-500 dark:text-amber-400",
+                  bg: "bg-amber-100 dark:bg-amber-900/30",
+                },
+                {
+                  label: "무제한 확장성",
+                  icon: (
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-6 w-6">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6" />
+                    </svg>
+                  ),
+                  color: "text-emerald-500 dark:text-emerald-400",
+                  bg: "bg-emerald-100 dark:bg-emerald-900/30",
+                },
+                {
+                  label: "유지보수 용이",
+                  icon: (
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-6 w-6">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z" />
+                    </svg>
+                  ),
+                  color: "text-rose-500 dark:text-rose-400",
+                  bg: "bg-rose-100 dark:bg-rose-900/30",
+                },
               ].map((item) => (
                 <div
-                  key={item}
-                  className="glass glass-hover flex items-center justify-center gap-2 rounded-xl px-4 py-4 text-center transition-all duration-300 hover:scale-105"
+                  key={item.label}
+                  className="glass glass-hover flex flex-col items-center justify-center gap-3 rounded-xl px-4 py-5 text-center transition-all duration-300 hover:scale-105"
                 >
-                  <span className="text-emerald-500">✅</span>
-                  <span className="font-medium text-amber-900 dark:text-zinc-200">
-                    {item}
+                  <div className={`rounded-xl p-3 ${item.bg}`}>
+                    <span className={item.color}>{item.icon}</span>
+                  </div>
+                  <span className="text-sm font-medium text-amber-900 dark:text-zinc-200">
+                    {item.label}
                   </span>
                 </div>
               ))}
@@ -238,12 +288,12 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Portfolio section */}
+          {/* Demo section */}
           <section className="flex w-full flex-col items-center gap-8">
             <div className="flex items-center gap-4">
               <div className="h-px w-12 bg-gradient-to-r from-transparent to-amber-300 dark:to-zinc-700" />
               <h2 className="text-xl font-semibold tracking-wide text-amber-900 dark:text-zinc-200">
-                포트폴리오
+                데모
               </h2>
               <div className="h-px w-12 bg-gradient-to-l from-transparent to-amber-300 dark:to-zinc-700" />
             </div>
@@ -262,7 +312,7 @@ export default function Home() {
                     Coming Soon
                   </span>
                   <span className="text-sm text-amber-500 dark:text-zinc-600">
-                    포트폴리오 #{i}
+                    데모 #{i}
                   </span>
                 </div>
               ))}
@@ -293,7 +343,7 @@ export default function Home() {
               ))}
             </div>
             <p className="text-sm text-amber-600/50 dark:text-zinc-700">
-              © 2024 오리연못미꾸라지. All rights reserved.
+              © 2024 오리연못 미꾸라지. All rights reserved.
             </p>
           </footer>
         </main>

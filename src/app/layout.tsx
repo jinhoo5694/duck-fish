@@ -14,8 +14,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "오리연못미꾸라지 | 웹 포트폴리오",
-  description: "KAIST 출신 개발자 3인이 만드는 웹 포트폴리오",
+  title: "오리연못 미꾸라지 | 웹 데모",
+  description: "KAIST 출신 개발자 3인이 만드는 웹 데모",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
