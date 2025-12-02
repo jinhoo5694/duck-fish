@@ -1,5 +1,6 @@
 import MemberCard from "@/components/MemberCard";
 import MouseFollower from "@/components/MouseFollower";
+import Image from "next/image";
 
 const members = [
   {
@@ -469,15 +470,40 @@ export default function Home() {
               </h2>
               <div className="h-1 w-24 rounded-full bg-gradient-to-r from-amber-500 via-rose-500 to-violet-500 dark:from-violet-500 dark:to-cyan-500" />
             </div>
-            <a
-              href="https://kmong.com/@%EC%98%A4%EB%A6%AC%EC%97%B0%EB%AA%BB%EB%AF%B8%EA%BE%B8%EB%9D%BC%EC%A7%80"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative overflow-hidden rounded-full bg-gradient-to-r from-amber-500 via-rose-500 to-violet-500 px-8 py-4 font-semibold text-white shadow-lg shadow-rose-500/25 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-rose-500/30 dark:from-violet-600 dark:to-cyan-600 dark:shadow-violet-500/25 dark:hover:shadow-violet-500/30"
-            >
-              <span className="relative z-10">크몽에서 문의하기</span>
-              <div className="absolute inset-0 -z-0 bg-gradient-to-r from-violet-500 via-rose-500 to-amber-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:from-cyan-600 dark:to-violet-600" />
-            </a>
+            <div className="flex flex-col items-center gap-4 sm:flex-row">
+              <a
+                href="https://kmong.com/@%EC%98%A4%EB%A6%AC%EC%97%B0%EB%AA%BB%EB%AF%B8%EA%BE%B8%EB%9D%BC%EC%A7%80"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative flex items-center gap-3 overflow-hidden rounded-full bg-gradient-to-r from-[#8ef56a] via-[#78e854] to-[#5cc93a] px-8 py-4 font-semibold text-black shadow-lg shadow-[#78e854]/25 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#78e854]/40"
+              >
+                <Image
+                  src="/kmong.png"
+                  alt="크몽"
+                  width={24}
+                  height={24}
+                  className="relative z-10 rounded"
+                />
+                <span className="relative z-10">크몽에서 문의하기</span>
+                <div className="absolute inset-0 -z-0 bg-gradient-to-r from-[#5cc93a] via-[#78e854] to-[#8ef56a] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              </a>
+              <a
+                href="https://soomgo.com/profile/users/17511763?prev=searchPro&hasFilter=false&serviceSelected=false&from=search_result"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative flex items-center gap-3 overflow-hidden rounded-full bg-gradient-to-r from-[#9171ff] via-[#7b5cfa] to-[#6347e8] px-8 py-4 font-semibold text-white shadow-lg shadow-[#7b5cfa]/25 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#7b5cfa]/40"
+              >
+                <Image
+                  src="/soomgo.webp"
+                  alt="숨고"
+                  width={24}
+                  height={24}
+                  className="relative z-10 rounded"
+                />
+                <span className="relative z-10">숨고에서 문의하기</span>
+                <div className="absolute inset-0 -z-0 bg-gradient-to-r from-[#6347e8] via-[#7b5cfa] to-[#9171ff] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              </a>
+            </div>
             <p className="text-center text-sm text-amber-700/80 dark:text-zinc-400">
               비즈니스 문의는{" "}
               <a
